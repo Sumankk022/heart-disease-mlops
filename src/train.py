@@ -47,6 +47,7 @@ from src.data import load_clean  # noqa: E402
 from src.preprocessing import build_preprocessor  # noqa: E402
 
 FIG_DIR = PROJECT_ROOT / "reports" / "figures"
+MLFLOW_TRACKING_DIR = PROJECT_ROOT / "mlruns"
 
 
 def candidate_models() -> Dict[str, Tuple[object, dict]]:
@@ -119,6 +120,8 @@ def train() -> Dict[str, float]:
         X, y, test_size=0.2, stratify=y, random_state=RANDOM_STATE
     )
 
+    MLFLOW_TRACKING_DIR.mkdir(parents=True, exist_ok=True)
+    mlflow.set_tracking_uri(f"file:{MLFLOW_TRACKING_DIR}")
     mlflow.set_experiment(MLFLOW_EXPERIMENT)
 
     best_name, best_pipeline, best_metrics, best_score = None, None, None, -1.0
