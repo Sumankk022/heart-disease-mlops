@@ -11,6 +11,7 @@ Usage:
 from __future__ import annotations
 
 import json
+import os
 from typing import Dict, Tuple
 
 import joblib
@@ -20,6 +21,8 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt  # noqa: E402
 import mlflow  # noqa: E402
 import mlflow.sklearn  # noqa: E402
+
+os.environ["MLFLOW_ALLOW_FILE_STORE"] = "true"
 from sklearn.ensemble import RandomForestClassifier  # noqa: E402
 from sklearn.linear_model import LogisticRegression  # noqa: E402
 from sklearn.metrics import (  # noqa: E402
