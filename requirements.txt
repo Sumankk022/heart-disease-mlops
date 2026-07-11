@@ -1,0 +1,31 @@
+# Build tooling: provides pkg_resources (not bundled on Python 3.12+).
+setuptools>=68,<81
+
+# Core ML / data
+pandas>=2.0,<3
+numpy>=2.0
+scikit-learn>=1.5
+matplotlib>=3.10
+seaborn>=0.13
+joblib>=1.4
+
+# Experiment tracking
+mlflow>=2.12
+
+# API serving
+fastapi>=0.100
+uvicorn[standard]>=0.29
+pydantic>=2.0
+
+# Monitoring
+prometheus-client>=0.20
+
+# Notebooks
+jupyter>=1.0
+nbconvert>=7.0
+ipykernel>=6.0
+
+# Testing / linting
+pytest>=8.0
+httpx>=0.25
+flake8>=7.0

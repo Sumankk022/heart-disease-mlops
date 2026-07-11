@@ -1,0 +1,17 @@
+apiVersion: v2
+name: heart-disease-api
+description: A Helm chart for Heart Disease Prediction API - MLOps Assignment
+type: application
+version: 1.0.0
+appVersion: "1.0"
+keywords:
+  - heart-disease
+  - mlops
+  - kubernetes
+  - prediction-api
+home: https://github.com/yourusername/heart-disease-mlops
+sources:
+  - https://github.com/yourusername/heart-disease-mlops
+maintainers:
+  - name: MLOps Team
+    email: mlops@example.com

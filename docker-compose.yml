@@ -1,0 +1,9 @@
+# One-command Docker run:  docker compose up --build
+# API available at http://localhost:8000  (docs at /docs)
+services:
+  api:
+    build: .
+    image: heart-disease-api:latest
+    ports:
+      - "8000:8000"
+    restart: unless-stopped

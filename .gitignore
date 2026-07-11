@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# ML artifacts
+mlruns/
+*.log
+
+# OS / editor
+.DS_Store
+.ipynb_checkpoints/
+
+# Keep model artifacts and data out of git by default
+models/*.joblib
+models/*.json
